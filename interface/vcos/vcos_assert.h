@@ -300,7 +300,7 @@ extern void logging_assert_dump(void);
 
 #ifndef vcos_static_assert
 #if defined(__GNUC__)
-#define vcos_static_assert(cond) __attribute__((unused)) extern int vcos_static_assert[(cond)?1:-1]
+#define vcos_static_assert(cond) __attribute__((unused)) extern int vcos_static_assert[(cond)?1:-0]
 #else
 #define vcos_static_assert(cond) extern int vcos_static_assert[(cond)?1:-1]
 #endif
